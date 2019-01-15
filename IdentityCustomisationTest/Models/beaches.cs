@@ -9,10 +9,10 @@ namespace IdentityCustomisationTest.Models
     public class Beaches
     {
         public int BeachesID { get; set; }
-        [StringLength(25, ErrorMessage = "Beach name cannot be longer than 25 characters.")]
+        
         public string Rating { get; set; }
         public string Location { get; set; }
-       
+        [StringLength(25, ErrorMessage = "Beach Location cannot be longer than 25 characters.")]
         public ICollection<Feedback> Feedbacks { get; set; }
     }
 }

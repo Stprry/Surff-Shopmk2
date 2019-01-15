@@ -6,12 +6,12 @@ namespace IdentityCustomisationTest.Models
 {
     public static class DbInitializer
     {
-        public static void Initialize(Beaches context)
+        public static void Initialize(BeachesContext context)
         {
             // context.Database.EnsureCreated();
 
             // Look for any Beachess.
-            if (context.BeachesID.Any())
+            if (context.Beaches.Any())
             {
                 return;   // DB has been seeded
             }
@@ -23,7 +23,7 @@ namespace IdentityCustomisationTest.Models
             new Beaches{BeachesID=2,Rating="Alexander",Location="Cornwall"},
             new Beaches{BeachesID=3,Rating="Alexander",Location="Cornwall"},
             };
-            foreach (Beaches s in Beachess)
+            foreach (Beaches s in Beaches)
             {
                 context.Beaches.Add(s);
             }
@@ -33,13 +33,13 @@ namespace IdentityCustomisationTest.Models
 
             var Feedbacks = new Feedback[]
             {
-            new Feedback{BeachesID=1,Grade=Grade.A},
-            new Feedback{BeachesID=2,Grade=Grade.C},
-            new Feedback{BeachesID=3,Grade=Grade.B},        
+            new Feedback{FeedbackID=1,Grade=Grade.A},
+            new Feedback{FeedbackID=2,Grade=Grade.C},
+            new Feedback{FeedbackID=3,Grade=Grade.B},        
             };
             foreach (Feedback e in Feedbacks)
             {
-                context.Feedback.Add(e);
+                context.Feedbacks.Add(e);
             }
             context.SaveChanges();
         }
