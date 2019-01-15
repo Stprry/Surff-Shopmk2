@@ -1,5 +1,5 @@
 ﻿using System;
-using IdentityCustomisationTest.Data;
+using SurfShop.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(IdentityCustomisationTest.Areas.Identity.IdentityHostingStartup))]
-namespace IdentityCustomisationTest.Areas.Identity
+[assembly: HostingStartup(typeof(SurfShop.Areas.Identity.IdentityHostingStartup))]
+namespace SurfShop.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

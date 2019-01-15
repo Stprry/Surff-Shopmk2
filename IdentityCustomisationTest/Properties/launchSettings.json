@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "IdentityCustomisationTest": {
+    "SurfShop": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

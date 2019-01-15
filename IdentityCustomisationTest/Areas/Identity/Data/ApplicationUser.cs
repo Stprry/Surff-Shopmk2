@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdentityCustomisationTest.Areas.Identity.Data
+namespace SurfShop.Areas.Identity.Data
 {
     public class ApplicationUser : IdentityUser
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace IdentityCustomisationTest.Pages
+namespace SurfShop.Pages
 {
     public class IndexModel : PageModel
     {

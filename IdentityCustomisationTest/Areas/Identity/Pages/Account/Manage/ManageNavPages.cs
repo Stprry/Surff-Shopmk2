@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace IdentityCustomisationTest.Areas.Identity.Pages.Account.Manage
+namespace SurfShop.Areas.Identity.Pages.Account.Manage
 {
     public static class ManageNavPages
     {

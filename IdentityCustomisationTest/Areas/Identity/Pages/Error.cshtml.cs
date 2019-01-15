@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
-namespace IdentityCustomisationTest.Areas.Identity.Pages
+namespace SurfShop.Areas.Identity.Pages
 {
     [AllowAnonymous]
     public class ErrorModel : PageModel

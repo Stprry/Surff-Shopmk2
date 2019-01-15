@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - IdentityCustomisationTest</title>
+    <title>@ViewData["Title"] - SurfShop</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,13 +26,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-page="/Index" class="navbar-brand">IdentityCustomisationTest</a>
+                <a asp-page="/Index" class="navbar-brand">SurfShop</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Contact">Contact</a></li>       
+                    <li><a asp-page="/Courses/Index">Courses</a></li>
+                    <li><a asp-page="/Instructors/Index">Instructors</a></li>
+                    <li><a asp-page="/Departments/Index">Departments</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -45,7 +48,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - IdentityCustomisationTest</p>
+            <p>&copy; 2018 - SurfShop</p>
         </footer>
     </div>
 

@@ -9,12 +9,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using IdentityCustomisationTest.Data;
+using SurfShop.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using IdentityCustomisationTest.Areas.Identity.Data;
+using SurfShop.Areas.Identity.Data;
 
-namespace IdentityCustomisationTest
+namespace SurfShop
 {
     public class Startup
     {

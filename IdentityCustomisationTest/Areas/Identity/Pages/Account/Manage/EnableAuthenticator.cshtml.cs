@@ -6,13 +6,13 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Linq;
 using System.Threading.Tasks;
-using IdentityCustomisationTest.Areas.Identity.Data;
+using SurfShop.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace IdentityCustomisationTest.Areas.Identity.Pages.Account.Manage
+namespace SurfShop.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
@@ -149,7 +149,7 @@ namespace IdentityCustomisationTest.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("IdentityCustomisationTest"),
+                _urlEncoder.Encode("SurfShop"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

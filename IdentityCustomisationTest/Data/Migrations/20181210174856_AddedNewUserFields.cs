@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace IdentityCustomisationTest.Data.Migrations
+namespace SurfShop.Data.Migrations
 {
     public partial class AddedNewUserFields : Migration
     {
