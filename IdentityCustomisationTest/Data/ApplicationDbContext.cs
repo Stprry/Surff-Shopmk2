@@ -4,6 +4,7 @@ using System.Text;
 using SurfShop.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using IdentityCustomisationTest.Models;
 
 namespace SurfShop.Data
 {
@@ -13,5 +14,9 @@ namespace SurfShop.Data
             : base(options)
         {
         }
+
+
+        public DbSet<Beaches> Beaches { get; set; }
+        public DbSet<Feedback> Feedback { get; set; }
     }
 }
