@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using IdentityCustomisationTest.Models;
+using SurfShop.Data;
+
 namespace SurfShop
 {
     public class Program
@@ -24,7 +26,7 @@ namespace SurfShop
 
                 try
                 {
-                    var context = services.GetRequiredService<BeachesContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     // using ContosoUniversity.Data; 
                     DbInitializer.Initialize(context);
                 }

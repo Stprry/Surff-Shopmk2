@@ -1,4 +1,5 @@
 ﻿using IdentityCustomisationTest.Models;
+using SurfShop.Data;
 using System;
 using System.Linq;
 
@@ -6,7 +7,7 @@ namespace IdentityCustomisationTest.Models
 {
     public static class DbInitializer
     {
-        public static void Initialize(BeachesContext context)
+        public static void Initialize(ApplicationDbContext context)
         {
             // context.Database.EnsureCreated();
 
@@ -39,7 +40,7 @@ namespace IdentityCustomisationTest.Models
             };
             foreach (Feedback e in Feedbacks)
             {
-                context.Feedbacks.Add(e);
+                context.Feedback.Add(e);
             }
             context.SaveChanges();
         }
