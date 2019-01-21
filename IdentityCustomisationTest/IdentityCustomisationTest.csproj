@@ -16,4 +16,10 @@
     <Folder Include="Pages\Beaches\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\HeadlandBeach.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>
