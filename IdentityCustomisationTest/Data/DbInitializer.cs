@@ -12,21 +12,21 @@ namespace IdentityCustomisationTest.Models
             // context.Database.EnsureCreated();
 
             // Look for any Beachess.
-            if (context.Beaches.Any())
+            if (context.Beach.Any())
             {
                 return;   // DB has been seeded
             }
 
-            var Beaches = new Beaches[]
+            var Beaches = new Beach[]
 
             {
-            new Beaches{BeachesID=1,Rating="Alexander",Location="Cornwall"},
-            new Beaches{BeachesID=2,Rating="Alexander",Location="Cornwall"},
-            new Beaches{BeachesID=3,Rating="Alexander",Location="Cornwall"},
+            new Beach{BeachID=1,Rating="Alexander",Location="Cornwall"},
+            new Beach{BeachID=2,Rating="Alexander",Location="Cornwall"},
+            new Beach{BeachID=3,Rating="Alexander",Location="Cornwall"},
             };
-            foreach (Beaches s in Beaches)
+            foreach (Beach s in Beaches)
             {
-                context.Beaches.Add(s);
+                context.Beach.Add(s);
             }
             context.SaveChanges();
 

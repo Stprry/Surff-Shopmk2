@@ -16,7 +16,7 @@ namespace SurfShop.Data
         }
 
 
-        public DbSet<Beaches> Beaches { get; set; }
+        public DbSet<Beach> Beach { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
     }
 }

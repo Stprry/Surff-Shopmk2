@@ -1,9 +1,12 @@
 ﻿@page
+@model IdentityCustomisationTest.Pages.Beaches.IndexModel
+
 @{
-    ViewData["Title"] = "Beaches";
+    ViewData["Title"] = "Index";
 }
 
-<h2>Beaches</h2>
+<h2>Index</h2>
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
@@ -69,17 +72,18 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Daniel Beach</a>
         </div>
-    </div>
-    <div class="dropdown" style="align-content: right">
-        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select beach ratings
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Sort By Rating A-F</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sort By Rating F-A</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sort By A-Z</a>
+
+        <div class="dropdown" style="align-content: flex-end">
+            <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select beach ratings
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Sort By Rating A-F</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Sort By Rating F-A</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Sort By A-Z</a>
+            </div>
         </div>
     </div>
 
@@ -89,3 +93,38 @@
         <div class="col-sm-4" style="background-image:url(\wwwroot\images\b1.jpg);"> Beach 3</div>
     </div>
 </div>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Beach[0].Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Beach[0].Location)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Beach)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.BeachID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.BeachID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.BeachID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

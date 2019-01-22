@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace IdentityCustomisationTest.Models
 {
-    public class Beaches
+    public class Beach
     {
-        public int BeachesID { get; set; }
+        public int BeachID { get; set; }
         
         public string Rating { get; set; }
         public string Location { get; set; }

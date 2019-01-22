@@ -27,7 +27,7 @@ namespace SurfShop
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
-                    // using ContosoUniversity.Data; 
+                    context.Database.EnsureCreated();
                     DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
