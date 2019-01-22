@@ -13,6 +13,7 @@ namespace SurfShop.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+            //Database.SetInitalizer<MApplicationDbContext>(new ApplicationDbContextSeeder());
         }
 
 
