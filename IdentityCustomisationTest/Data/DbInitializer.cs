@@ -20,9 +20,9 @@ namespace IdentityCustomisationTest.Models
             var Beaches = new Beaches[]
 
             {
-            new Beaches{BeachesID=1,Rating="Alexander",Location="Cornwall"},
-            new Beaches{BeachesID=2,Rating="Alexander",Location="Cornwall"},
-            new Beaches{BeachesID=3,Rating="Alexander",Location="Cornwall"},
+            new Beaches{BeachesID=1,Rating="F",Location="Cornwall"},
+            new Beaches{BeachesID=2,Rating="A",Location="Greece"},
+            new Beaches{BeachesID=3,Rating="B",Location="France"},
             };
             foreach (Beaches s in Beaches)
             {
