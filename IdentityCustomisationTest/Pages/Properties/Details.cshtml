@@ -1,0 +1,61 @@
+﻿@page
+@model IdentityCustomisationTest.Pages.Properties.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.HouseNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.HouseNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.PostCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.PostCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.MainImagePath)
+        </dt>
+        <div id="panorama"></div>
+        <script>
+                    pannellum.viewer('panorama', {
+                        "type": "equirectangular",
+                        "panorama": "/uploads/@Model.Property.MainImagePath"
+                    });
+        </script>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Property.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

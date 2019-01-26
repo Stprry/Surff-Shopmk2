@@ -1,0 +1,66 @@
+﻿@page
+@model IdentityCustomisationTest.Pages.Properties.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].HouseNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Address1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Address2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Address3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].MainImagePath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Property) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HouseNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainImagePath)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

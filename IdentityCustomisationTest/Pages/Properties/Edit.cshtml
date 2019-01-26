@@ -1,0 +1,63 @@
+﻿@page
+@model IdentityCustomisationTest.Pages.Properties.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Property</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Property.ID" />
+            <div class="form-group">
+                <label asp-for="Property.HouseNum" class="control-label"></label>
+                <input asp-for="Property.HouseNum" class="form-control" />
+                <span asp-validation-for="Property.HouseNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Address1" class="control-label"></label>
+                <input asp-for="Property.Address1" class="form-control" />
+                <span asp-validation-for="Property.Address1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Address2" class="control-label"></label>
+                <input asp-for="Property.Address2" class="form-control" />
+                <span asp-validation-for="Property.Address2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Address3" class="control-label"></label>
+                <input asp-for="Property.Address3" class="form-control" />
+                <span asp-validation-for="Property.Address3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.PostCode" class="control-label"></label>
+                <input asp-for="Property.PostCode" class="form-control" />
+                <span asp-validation-for="Property.PostCode" class="text-danger"></span>
+            </div>
+            @if (Model.Property.MainImagePath != null)
+            {
+                <div class="form-group">
+                    Existing Image:
+                    <img src="/uploads/@Model.Property.MainImagePath" />
+                </div>
+            }
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
