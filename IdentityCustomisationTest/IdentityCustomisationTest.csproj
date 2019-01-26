@@ -22,7 +22,7 @@
     <Content Update="Pages\PortugalBeach.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Pages\HeadlandBeach.cshtml">
+    <Content Update="Pages\Beaches\HeadlandBeach.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>
