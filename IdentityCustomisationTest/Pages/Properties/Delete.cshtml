@@ -1,0 +1,58 @@
+﻿@page
+@model IdentityCustomisationTest.Pages.Properties.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.HouseNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.HouseNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.PostCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.PostCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.MainImagePath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.MainImagePath)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Property.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

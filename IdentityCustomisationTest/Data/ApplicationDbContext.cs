@@ -19,5 +19,6 @@ namespace SurfShop.Data
 
         public DbSet<Beach> Beach { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
+        public DbSet<IdentityCustomisationTest.Models.Property> Property { get; set; }
     }
 }

@@ -23,15 +23,23 @@ body {
     width: 100%;
 }
 
+#DropDowns{
+    align-content
+}
 /* QR code generator */
 #qrCode {
     margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+    /* Hide/rearrange for smaller screens */
+    @media screen and (max-width: 767px) {
+        /* Hide captions */
+        .carousel-caption {
+            display: none;
+        }
     }
+
+    #panorama
+
+{
+    width: 500px;
+    height: 300px;
 }
