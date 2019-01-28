@@ -69,7 +69,7 @@ namespace SurfShop.Data.Migrations
 
                     b.Property<string>("Address3");
 
-                    b.Property<string>("HouseNum");
+                    b.Property<string>("BeachNum");
 
                     b.Property<string>("MainImagePath");
 

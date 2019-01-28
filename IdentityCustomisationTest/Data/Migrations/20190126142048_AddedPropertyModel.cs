@@ -13,7 +13,7 @@ namespace SurfShop.Data.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    HouseNum = table.Column<string>(nullable: true),
+                    BeachNum = table.Column<string>(nullable: true),
                     Address1 = table.Column<string>(nullable: true),
                     Address2 = table.Column<string>(nullable: true),
                     Address3 = table.Column<string>(nullable: true),

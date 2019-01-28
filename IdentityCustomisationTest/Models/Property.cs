@@ -11,14 +11,18 @@ namespace IdentityCustomisationTest.Models
     public class Property
     {
         public int ID { get; set; }
-        public string HouseNum { get; set; }
+        [Display(Name = "Beach")]
+        public string BeachNum { get; set; }
+        [Display(Name = "Location")]
         public string Address1 { get; set; }
+        [Display(Name = "Tide")]
         public string Address2 { get; set; }
+        [Display(Name = "Wind Type")]
         public string Address3 { get; set; }
         [MaxLength(10)]
         public string PostCode { get; set; }
 
-        [Display(Name = "Property 360 Image")]
+        [Display(Name = "Beach 360 Image")]
         public string MainImagePath { get; set; }
 
         [NotMappedAttribute]
