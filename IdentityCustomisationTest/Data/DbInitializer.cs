@@ -35,8 +35,9 @@ namespace IdentityCustomisationTest.Models
             var Feedbacks = new Feedback[]
             {
             new Feedback{FeedbackID=1,Grade=Grade.A},
-            new Feedback{FeedbackID=2,Grade=Grade.C},
-            new Feedback{FeedbackID=3,Grade=Grade.B},        
+            new Feedback{FeedbackID=2,Grade=Grade.B},
+            new Feedback{FeedbackID=3,Grade=Grade.C}, 
+            
             };
             foreach (Feedback e in Feedbacks)
             {
