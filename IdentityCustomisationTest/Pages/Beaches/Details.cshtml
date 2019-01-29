@@ -23,6 +23,25 @@
         <dd>
             @Html.DisplayFor(model => model.Beach.Location)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Beach.Feedbacks)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Grade</th>
+                </tr>
+                @foreach (var item in Model.FeedbackResults)
+                {
+                    <tr>
+                        <td>
+                            @item.Grade
+                        </td>
+
+                    </tr>
+                }
+            </table>
+        </dd>
     </dl>
 </div>
 <div>

@@ -21,8 +21,13 @@ namespace IdentityCustomisationTest.Models
 
             {
             new Beach{Rating="A",Location="Cornwall"},
-            new Beach{Rating="B",Location="Cornwall"},
-            new Beach{Rating="C",Location="Cornwall"},
+            new Beach{Rating="B",Location="Crash Boat Beach"},
+            new Beach{Rating="D",Location="Larga Beach"},
+            new Beach{Rating="C",Location="Boulder Beach"},
+            new Beach{Rating="A",Location="James Bond Beach"},
+            new Beach{Rating="F",Location="Porto-Vecchio"},
+            new Beach{Rating="D",Location="Redonda Beach"},
+            new Beach{Rating="B",Location="Praia da Nazaré "},
             };
             foreach (Beach s in Beaches)
             {
@@ -34,9 +39,11 @@ namespace IdentityCustomisationTest.Models
 
             var Feedbacks = new Feedback[]
             {
-            new Feedback{FeedbackID=1,Grade=Grade.A},
-            new Feedback{FeedbackID=2,Grade=Grade.C},
-            new Feedback{FeedbackID=3,Grade=Grade.B},        
+            new Feedback{Grade=Grade.A,Beach=1,ApplicationUser=1},
+            new Feedback{Grade=Grade.B,Beach=1,ApplicationUser=1},
+            new Feedback{Grade=Grade.C,Beach=1,ApplicationUser=1},
+            new Feedback{Grade=Grade.D,Beach=2,ApplicationUser=1},
+            new Feedback{Grade=Grade.F,Beach=2,ApplicationUser=1},
             };
             foreach (Feedback e in Feedbacks)
             {
